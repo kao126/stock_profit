@@ -89,6 +89,62 @@ export default function Home() {
         {/* <ImageCard variant="ghost" /> */}
         {/* <ImageCard variant="classic" /> */}
       </Container>
+      <Container py={'4'}>
+        <Accordion.Root className="" type="single" collapsible>
+          <Accordion.Item value="item-1">
+            <Accordion.Header className="flex">
+              <Accordion.Trigger className="hover:bg-red group flex h-[45px] flex-1 items-center justify-between px-5 text-[15px] leading-none shadow-[0_1px_0] outline-none">
+                <Text className="text-[15px] font-medium leading-[35px]">
+                  Details
+                </Text>
+                <ChevronDownIcon
+                  className="ease-[cubic-bezier(0.87,_0,_0.13,_1)] transition-transform duration-300 group-data-[state=open]:rotate-180"
+                  aria-hidden
+                />
+              </Accordion.Trigger>
+            </Accordion.Header>
+            <Accordion.AccordionContent className="data-[state=open]:animate-slideDown data-[state=closed]:animate-slideUp">
+              <Box>
+                <RadioCards.Root
+                  defaultValue="1"
+                  columns={{ initial: '1', sm: '3' }}
+                >
+                  <RadioCards.Item value="1">
+                    <Flex direction="column" width="100%">
+                      <Text weight="bold">現物取引</Text>
+                      <Text>一般口座</Text>
+                    </Flex>
+                  </RadioCards.Item>
+                  <RadioCards.Item value="2">
+                    <Flex direction="column" width="100%">
+                      <Text weight="bold">現物取引</Text>
+                      <Text>特定口座</Text>
+                    </Flex>
+                  </RadioCards.Item>
+                  <RadioCards.Item value="3">
+                    <Flex direction="column" width="100%">
+                      <Text weight="bold">現物取引</Text>
+                      <Text>NISA</Text>
+                    </Flex>
+                  </RadioCards.Item>
+                  <RadioCards.Item value="4">
+                    <Flex direction="column" width="100%">
+                      <Text weight="bold">信用取引</Text>
+                      <Text>一般口座</Text>
+                    </Flex>
+                  </RadioCards.Item>
+                  <RadioCards.Item value="5">
+                    <Flex direction="column" width="100%">
+                      <Text weight="bold">信用取引</Text>
+                      <Text>特定口座</Text>
+                    </Flex>
+                  </RadioCards.Item>
+                </RadioCards.Root>
+              </Box>
+            </Accordion.AccordionContent>
+          </Accordion.Item>
+        </Accordion.Root>
+      </Container>
     </main>
   );
 }
