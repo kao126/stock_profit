@@ -15,12 +15,32 @@ import {
   Checkbox,
   DataList,
   Badge,
+  Link,
 } from '@radix-ui/themes';
 import { ImageCard } from '@/components/card/imageCard';
 
 export default function Home() {
   return (
     <main>
+      <Container py={'4'}>
+        <Flex justify="center" align="center" gap="2">
+          <Button variant="surface" mt={'4'} size={'2'} asChild>
+            <Link href="/about" underline="none">
+              About
+            </Link>
+          </Button>
+          <Button variant="surface" mt={'4'} size={'2'} asChild>
+            <Link href="/calculator" underline="none">
+              Calculator
+            </Link>
+          </Button>
+          <Button variant="surface" mt={'4'} size={'2'} asChild>
+            <Link href="/tree_map" underline="none">
+              Tree Map
+            </Link>
+          </Button>
+        </Flex>
+      </Container>
       <Container py={'4'}>
         <Heading as="h1" mb={'2'} size={'7'} align="center">
           Comparison
