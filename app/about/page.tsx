@@ -1,5 +1,5 @@
 import { Box, Container, Heading, Text } from "@radix-ui/themes";
-export default function Home() {
+export default function About() {
   return (
     <>
       <Box
