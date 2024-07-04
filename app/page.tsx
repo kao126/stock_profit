@@ -15,9 +15,9 @@ import {
   Checkbox,
   DataList,
   Badge,
-  Link,
 } from '@radix-ui/themes';
 import { ImageCard } from '@/components/card/imageCard';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -25,19 +25,16 @@ export default function Home() {
       <Container py={'4'}>
         <Flex justify="center" align="center" gap="2">
           <Button variant="surface" mt={'4'} size={'2'} asChild>
-            <Link href="/about" underline="none">
-              About
-            </Link>
+            <Link href="/about">About</Link>
           </Button>
           <Button variant="surface" mt={'4'} size={'2'} asChild>
-            <Link href="/calculator" underline="none">
-              Calculator
-            </Link>
+            <Link href="/new">New</Link>
           </Button>
           <Button variant="surface" mt={'4'} size={'2'} asChild>
-            <Link href="/tree_map" underline="none">
-              Tree Map
-            </Link>
+            <Link href="/calculator">Calculator</Link>
+          </Button>
+          <Button variant="surface" mt={'4'} size={'2'} asChild>
+            <Link href="/tree_map">Tree Map</Link>
           </Button>
         </Flex>
       </Container>
