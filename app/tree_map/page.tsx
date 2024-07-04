@@ -4,6 +4,7 @@ import React from 'react';
 import { Chart } from 'react-google-charts';
 export const data = [
   ['Location', 'Parent', 'Estimate', 'Market increase/decrease (color)'],
+import { BackBtn } from '@/components/common/backBtn';
   ['Stock', null, 0, 0],
   ['America', 'Stock', 10, 0],
   ['Europe', 'Stock', 8, 0],
@@ -57,6 +58,7 @@ export default function TreeMap() {
         data={data}
         // options={options}
       />
+      <BackBtn />
     </Container>
   );
 }

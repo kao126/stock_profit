@@ -10,6 +10,7 @@ import {
   Text,
   Separator,
 } from '@radix-ui/themes';
+import { BackBtn } from '@/components/common/backBtn';
 
 const TAX_RATE = 1 - 0.20315;
 
@@ -232,6 +233,7 @@ export default function Calculator() {
           )
         </Text>
       </Box>
+      <BackBtn />
     </>
   );
 }

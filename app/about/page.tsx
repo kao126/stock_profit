@@ -1,4 +1,6 @@
 import { Box, Container, Heading, Text } from "@radix-ui/themes";
+import { BackBtn } from '@/components/common/backBtn';
+
 export default function About() {
   return (
     <>
@@ -36,6 +38,7 @@ export default function About() {
           commodo ex non excepteur duis sunt velit enim. Voluptate laboris sint
           cupidatat ullamco ut ea consectetur et est culpa et culpa duis.
         </Text>
+        <BackBtn />
       </Container>
     </>
   );
