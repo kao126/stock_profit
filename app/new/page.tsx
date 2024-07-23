@@ -5,6 +5,18 @@ import { Box, Card, Container, Heading, Text } from '@radix-ui/themes';
 import { BackBtn } from '@/components/common/backBtn';
 
 export default function New() {
+  async function getAccessToken() {
+    await fetch('/api/refresh_token');
+  }
+  async function getIdToken() {
+    await fetch('/api/id_token');
+  }
+  // async function getAccessToken() {
+  //   const res = await fetch('/api/auth', { method: 'post' });
+  //   const data = await res.json();
+  //   console.log(data);
+  // }
+
   return (
     <Box maxWidth="600px" className="mx-auto">
       <Card my={'7'} variant="classic" size={'4'} style={{ borderRadius: '0' }}>
@@ -17,6 +29,20 @@ export default function New() {
           </Text>
           <Box>
             <Form.Root className="w-[300px] mx-auto">
+              <Form.Field className="grid mb-[10px]" name="price">
+                <div className="flex items-baseline justify-between">
+                  <Form.Label className="text-[15px] font-medium leading-[35px]">
+                    Company
+                  </Form.Label>
+                </div>
+                <Form.Control asChild>
+                  <select
+                    className="box-border w-full bg-blackA2 shadow-blackA6 inline-flex h-[35px] appearance-none items-center justify-center rounded-[4px] px-[10px] text-[15px] leading-none shadow-[0_0_0_1px] outline-none hover:shadow-[0_0_0_1px_black] focus:shadow-[0_0_0_2px_black] selection:color-white selection:bg-blackA6"
+                    onClick={getAccessToken}
+                    required
+                  />
+                </Form.Control>
+              </Form.Field>
               <Form.Field className="grid mb-[10px]" name="price">
                 <div className="flex items-baseline justify-between">
                   <Form.Label className="text-[15px] font-medium leading-[35px]">
@@ -39,6 +65,7 @@ export default function New() {
                   <input
                     className="box-border w-full bg-blackA2 shadow-blackA6 inline-flex h-[35px] appearance-none items-center justify-center rounded-[4px] px-[10px] text-[15px] leading-none shadow-[0_0_0_1px] outline-none hover:shadow-[0_0_0_1px_black] focus:shadow-[0_0_0_2px_black] selection:color-white selection:bg-blackA6"
                     type="number"
+                    onClick={getIdToken}
                     // onChange={(e) =>
                     //   // setAcquisitionPrice(Number(e.target.value))
                     // }
